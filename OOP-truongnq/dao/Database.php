@@ -30,18 +30,15 @@ class Database {
         }
 
         if($name == "product") {
-            $this->productTable[] = $row;
-            return true;
+            return $this->productTable[] = $row;
         }
 
         else if($name == "accessory") {
-            $this->accessoryTable[] = $row;
-            return true;
+            return $this->accessoryTable[] = $row;
         }
 
         else if($name == "category") {
-            $this->categoryTable[] = $row;
-            return true;
+            return $this->categoryTable[] = $row;
         }
 
         return false;

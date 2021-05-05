@@ -5,11 +5,8 @@ require_once "BaseDAO.php";
 
 class CategoryDAO extends BaseDAO {
 
-    protected $name = "category";
+    public $name = "category";
     //methods
-    function findAll(){
-        Database::getInstance()->selectTable($this->name);
-    }
 
     function findById($id) {
         for($i = 0; $i < sizeof(Database::getInstance()->categoryTable); $i++) {

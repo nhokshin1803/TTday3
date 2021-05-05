@@ -1,10 +1,12 @@
 <?php
 require_once "BaseRow.php";
-class Category extends BaseRow{
+require_once "../interface/IEntity.php";
+
+class Category extends BaseRow implements IEntity{
     //properties
     public int $id;
     public string $name;
-
+    
     //methods
 
 }

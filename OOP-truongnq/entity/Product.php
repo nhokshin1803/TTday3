@@ -1,13 +1,12 @@
 <?php
 require_once "BaseRow.php";
+require_once "../interface/IEntity.php";
 
-class Product extends BaseRow{
+class Product extends BaseRow implements IEntity{
     //properties
-    private int $id;
-    private string $name;
-    private int $categoryId;
-    private int $quantity;
-    private string $productLine;
+    public int $id;
+    public string $name;
+    protected int $categoryId;
 
     //methods
     
@@ -17,22 +16,6 @@ class Product extends BaseRow{
 
     function get_categoryId() {
         return $this->categoryId;
-    }
-
-    function set_quantity($quantity) {
-        $this->quantity = $quantity;
-    }
-
-    function get_quantity() {
-        return $this->quantity;
-    }
-
-    function set_productLine($productLine) {
-        $this->productLine = $productLine;
-    }
-
-    function get_productLine() {
-        return $this->productLine;
     }
 
 }

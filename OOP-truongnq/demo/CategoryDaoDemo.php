@@ -26,6 +26,7 @@ class CategoryDaoDemo {
 
 $cDD = new CategoryDaoDemo();
 $cDD->insertTest();
-// $cDD->updateTest();
+$cDD->findAllTest();
+$cDD->updateTest();
 $cDD->findAllTest();
 ?>

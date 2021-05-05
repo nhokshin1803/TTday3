@@ -1,5 +1,7 @@
 <?php
 abstract class BaseRow {
+    public int $id;
+    public string $name;
     function __construct($id, $name) {
         $this->id = $id;
         $this->name = $name; 
