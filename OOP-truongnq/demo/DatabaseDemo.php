@@ -2,64 +2,62 @@
 require_once "../dao/Database.php";
 class DatabaseDemo {
     //methods 
-    public Database $db;
     function __construct() {
-        $this->db = new Database();
     }
 
     function insertTableTest() {
-        $this->db->insertTable("product", "Truong");
-        $this->db->insertTable("product", "An");
-        $this->db->insertTable("product", "Nghia");
+        Database::getInstance()->insertTable("product", "Truong");
+        Database::getInstance()->insertTable("product", "An");
+        Database::getInstance()->insertTable("product", "Nghia");
     }
     
     function selectTableTest() {
-        $this->db->selectTable("product");
+        Database::getInstance()->selectTable("product");
     }
 
     function updateTableTest() {
-        $this->db->updateTableById(2, new Product(1,"Anh"));
+        Database::getInstance()->updateTableById(2, new Product(1,"Anh"));
     }
 
     function deleteTableTest() {
-        $this->db->deleteTable("product", 1);
+        Database::getInstance()->deleteTable("product", 1);
     }
 
     function truncateTableTest() {
-        $this->db->truncateTable("product");
+        Database::getInstance()->truncateTable("product");
     }
 
     function initDatabase() {
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));
-        $this->db->insertTable("product", new Product(1,"A"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("accessory", new Accessory(1,"B"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
-        $this->db->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));
+        Database::getInstance()->insertTable("product", new Product(1,"A"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("accessory", new Accessory(1,"B"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
+        Database::getInstance()->insertTable("category", new Accessory(1,"C"));        
     }
 }
 $dbD = new DatabaseDemo();
